@@ -12,7 +12,7 @@ for(var i = palabra.length-1; i>=0; i--)
 console.log(`Palabra Original: ${palabra}\n Palabra Revertida: ${palabrarevertida}  `)
 
 //SEGUNDO EJERCIO DEL DEBER 
-/* UTILICEN FUNCIONES
+/* 
 - primera palabra en mayuscula
 - la palabra de la mitad en mayuscula
 - ultima palabra  en mayuscula
