@@ -4,9 +4,9 @@
 // - callback eliminar un usuario
 // - callback listar usuario
 
-//Listar
+///LISTA-USUARIO///
   
-///Registro Usuario///
+
 
 var DatosUsuario = ['Jefferson', '22', '16/07/1997', '0992247420'] 
 
@@ -25,7 +25,7 @@ function listaUsuario(array, cb) {
   
     console.log(respuestaMensaje);
   });
-///REGISTRAR-USUARIO 
+///REGISTRAR-USUARIO/// 
 
 function RegistrarUsuario(DatosUsuario,nombre,edad,fechaNacimiento,telf,cb){
    DatosUsuario.push(nombre)  
