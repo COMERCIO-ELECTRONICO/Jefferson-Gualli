@@ -96,6 +96,6 @@ class alumno extends Person {
 }
 
 const alumnoNuevo: alumno = new alumno();
-alumnoNuevo.setNombre('kevin');
+alumnoNuevo.setNombre('Jefferson');
 alumnoNuevo.setApellido('');
 alumnoNuevo.getApellido();

@@ -20,9 +20,9 @@ interface trabajo extends correo, persona{
      nombreTrabajo: ''
  }
 
- const valor = 1;
-//CASTEO  
-// AS
-//  valor as number;
-//  <tipoDato>
-<number>valor
+//  const valor = 1;
+// //CASTEO  
+// // AS
+// //  valor as number;
+// //  <tipoDato>
+// <number>valor
