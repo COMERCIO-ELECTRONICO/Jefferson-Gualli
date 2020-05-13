@@ -68,3 +68,52 @@ var hijo = /** @class */ (function (_super) {
 }(Persona));
 var hijoPersona = new hijo('Jefferson', 'Gualli');
 console.log(hijoPersona);
+var Person = /** @class */ (function () {
+    function Person(nombre, apellido) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+    }
+    return Person;
+}());
+var alumno = /** @class */ (function (_super) {
+    __extends(alumno, _super);
+    function alumno(nombre, apellido) {
+        var _this = _super.call(this, nombre, apellido) || this;
+        _this.nombre = nombre;
+        _this.apellido = apellido;
+        return _this;
+    }
+    Object.defineProperty(alumno.prototype, "setNombre", {
+        set: function (nombre) {
+            this.nombre = nombre;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(alumno.prototype, "setApellido", {
+        set: function (apellido) {
+            this.apellido = apellido;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(alumno.prototype, "getNombre", {
+        get: function () {
+            return this.nombre;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(alumno.prototype, "getApellido", {
+        get: function () {
+            return this.nombre;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return alumno;
+}(Person));
+var alumnoNuevo = new alumno();
+alumnoNuevo.setNombre('kevin');
+alumnoNuevo.setApellido('');
+alumnoNuevo.getApellido();
