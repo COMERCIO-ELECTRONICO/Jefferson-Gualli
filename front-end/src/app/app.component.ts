@@ -10,8 +10,15 @@ export class AppComponent {
 
   tituloPadre = 'soy tu padre hola';
   nombreBotonPadre = 'alertar!!!!!!!!';
-  imagenPadre = 'https://lh3.googleusercontent.com/proxy/8ngcZ0cZg5O0HP2JiO02FKYFfzU-cm4Qmyj2OouM31b230f78aut51Smna6oUlpsSqsxB9_yZs8sO6hMMtpi7ZXvpADKS5h1dkcKIPSZd3w2zvS3XeFmSQr8gwOYJTL7vkyV';
-obtenerRespuestaHijo(evento){
+  imagenPadre = 'https://4.bp.blogspot.com/-7vd35hOm3Vk/WanQ2JNGLhI/AAAAAAAAHNQ/l6pspfvoGrUnxm8t3gYXNqIGJ_dUAIQEACLcBGAs/s1600/Introducci%25C3%25B3n%2Bal%2BComercio%2BElectr%25C3%25B3nico.jpg';
+
+       datosHijo = {
+        tituloPadre: 'soy tu padre hola',
+        nombreBotonPadre: 'alertar!!!!!!!!',
+        imagenPadre: 'https://4.bp.blogspot.com/-7vd35hOm3Vk/WanQ2JNGLhI/AAAAAAAAHNQ/l6pspfvoGrUnxm8t3gYXNqIGJ_dUAIQEACLcBGAs/s1600/Introducci%25C3%25B3n%2Bal%2BComercio%2BElectr%25C3%25B3nico.jpg',
+      
+       }
+  obtenerRespuestaHijo(evento){
   console.log(evento)
 }
 }
