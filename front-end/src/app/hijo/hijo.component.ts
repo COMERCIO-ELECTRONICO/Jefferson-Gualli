@@ -9,10 +9,13 @@ export class HijoComponent implements OnInit {
 
   constructor() { }
 @Input() valorDelPadre: string;
-  ngOnInit(): void {
+
+  ngOnInit(): void{
+
     console.log(this.valorDelPadre);
   }
   alertaValorPadre(){
+    
     alert(this.valorDelPadre)
   }
 }
