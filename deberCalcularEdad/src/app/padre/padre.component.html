@@ -1,0 +1,10 @@
+
+<h1>Componente padre</h1>
+      <input type="number"
+      [(ngModel)]="edadvalor">{{edadvalor}} <br><br>
+       la edad calculada segun elaño ingresado es:<br>
+     
+       {{edad}}  años
+      <app-hijo
+      [valoredad]="edadvalor">
+      </app-hijo>
