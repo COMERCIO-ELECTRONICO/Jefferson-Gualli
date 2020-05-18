@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'proyecto-estilos';
+  esconderHola = false;
+  arregloNuemros = [{ nombre: 'Jefferson' }, { nombre: 'David' }];
+
+  enventoClick(){
+    this.esconderHola = true;
+  }
 }
