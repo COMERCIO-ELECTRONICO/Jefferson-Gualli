@@ -7,11 +7,15 @@ import { NoEncontradoComponent } from './inicio/no-encontrado/no-encontrado.comp
 
 const rutas: Routes =[
     {
-    path: 'inicio',
+    path: ':inicio',
     component: HomeComponent
 },
 {
-    path: 'login',
+    path: ':id/inicio',
+    component: HomeComponent
+},
+{
+    path: 'login/:id',
     component: LoginComponent
 },
 {
