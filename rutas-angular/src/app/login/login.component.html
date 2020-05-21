@@ -224,7 +224,8 @@
         [(ngModel)]="password"
         name="password"
         placeholder="*******"
-        minlength="5"
+        minlength="8"
+        maxlength="8"
         required
         #campoPassword="ngModel"
       />
@@ -238,7 +239,7 @@
         Campo password requerido
       </p>
       <p *ngIf="campoPassword.errors.minlength">
-        Minimo 5 caracteres
+        Minimo 8 caracteres
       </p> 
     </div>
 
@@ -252,7 +253,8 @@
         [(ngModel)]="password2"
         name="password2"
         placeholder="*******"
-        minlength="5"
+        minlength="8"
+        maxlength="8"
         required
         #campoPassword2="ngModel"
        
@@ -265,14 +267,14 @@
       *ngIf="campoPassword2.errors && campoPassword2.dirty === true"
     >
    
-    <!-- <p *ngIf="validador===false">
+    <p *ngIf="validador===false">
       Las contraseñas no coinciden
-    </p>  -->
+    </p> 
       <p *ngIf="campoPassword2.errors.required">
         Campo requerido
       </p> 
       <p *ngIf="campoPassword2.errors.minlength">
-        Minimo 5 caracteres
+        Minimo 8 caracteres
       </p> 
       
     </div>
