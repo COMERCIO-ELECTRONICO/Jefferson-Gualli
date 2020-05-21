@@ -155,29 +155,29 @@
     </div>
 
     <div class="form-group">
-      <label for="exampleInputPassword1">Telefono</label>
+      <label for="exampleInputPassword1">Celular</label>
       <input
         type="text"
         class="form-control"
         id="exampleInputPassword1"
-        [(ngModel)]="telefono"
-        name="telefono"
-        placeholder="Ingrese el telefono"
+        [(ngModel)]="celular"
+        name="celular"
+        placeholder="Ingrese el Celular"
         minlength="10"
         required
-        #campoTelefono="ngModel"
+        #campoCelular="ngModel"
       />
     </div>
 
     <div
       class="alert alert-danger"
       role="alert"
-      *ngIf="campoTelefono.errors && campoTelefono.dirty === true"
+      *ngIf="campoCelular.errors && campoCelular.dirty === true"
     >
-      <p *ngIf="campoTelefono.errors.required">
-        Campo telefono requerido
+      <p *ngIf="campoCelular.errors.required">
+        Campo Celular requerido
       </p>
-      <p *ngIf="campoTelefono.errors.minlength">
+      <p *ngIf="campoCelular.errors.minlength">
         Minimo 10 caracteres
       </p>
     </div>

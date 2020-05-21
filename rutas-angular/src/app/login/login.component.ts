@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
 // contrasena = '';
 nombre = '';
 apellido = '';
-telefono = '';
+celular = '';
 email = '';
 contrasena = '';
 password = '';
@@ -32,8 +32,8 @@ validar(){
       formulario.controls.nombre.value +
       ' Apellido: ' +
       formulario.controls.apellido.value +
-      ' Telefono: ' +
-      formulario.controls.telefono.value +
+      ' Celular: ' +
+      formulario.controls.celular.value +
       ' Email: ' +
       formulario.controls.email.value +
       ' Password: ' +
