@@ -8,18 +8,36 @@ import { Component, OnInit } from '@angular/core';
 export class LoginComponent implements OnInit {
 
   constructor() { }
+// email = '';
+// contrasena = '';
+nombre = '';
+apellido = '';
+telefono = '';
 email = '';
 contrasena = '';
+password = '';
+password2 = '';
+validador:boolean=false
   ngOnInit(): void {
   }
-
+validar(){
+  if (this.password==this.password2){
+    this.validador=true
+  }
+}
   obtenerFormulario(formulario) {
     console.log(formulario);
     alert(
-      'correo: ' +
-        formulario.controls.email.value +
-        'password: ' +
-        formulario.controls.contrasena.value
-    );
-  }
+      'Nombre: ' +
+      formulario.controls.nombre.value +
+      ' Apellido: ' +
+      formulario.controls.apellido.value +
+      ' Telefono: ' +
+      formulario.controls.telefono.value +
+      ' Email: ' +
+      formulario.controls.email.value +
+      ' Password: ' +
+      formulario.controls.password.value
+  );
+}
 }

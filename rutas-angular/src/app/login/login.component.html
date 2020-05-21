@@ -1,4 +1,4 @@
-<p>login works!</p>
+<!-- <p>login works!</p>
 <div class="container">
   <h1>
     variables html #
@@ -91,4 +91,198 @@
     Submit</button>
   </form>
 
+</div> -->
+<div class="container">
+  <h2>Registro Usuario</h2>
+  <form
+    (ngSubmit)="obtenerFormulario(formularioUsuario)"
+    #formularioUsuario="ngForm"
+  >
+    <div class="form-group">
+      <label for="exampleInputPassword1">Nombre</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exampleInputPassword1"
+        [(ngModel)]="nombre"
+        name="nombre"
+        placeholder="Ingrese el nombre"
+        minlength="3"
+        required
+        #campoNombre="ngModel"
+      />
+    </div>
+
+    <div
+      class="alert alert-danger"
+      role="alert"
+      *ngIf="campoNombre.errors && campoNombre.dirty === true"
+    >
+      <p *ngIf="campoNombre.errors.required">
+        Campo nombre requerido
+      </p>
+      <p *ngIf="campoNombre.errors.minlength">
+        Minimo 3 caracteres
+      </p>
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputPassword1">Apellido</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exampleInputPassword1"
+        [(ngModel)]="apellido"
+        name="apellido"
+        placeholder="Ingrese el apellido"
+        minlength="3"
+        required
+        #campoApellido="ngModel"
+      />
+    </div>
+
+    <div
+      class="alert alert-danger"
+      role="alert"
+      *ngIf="campoApellido.errors && campoApellido.dirty === true"
+    >
+      <p *ngIf="campoApellido.errors.required">
+        Campo apellido requerido
+      </p>
+      <p *ngIf="campoApellido.errors.minlength">
+        Minimo 3 caracteres
+      </p>
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputPassword1">Telefono</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exampleInputPassword1"
+        [(ngModel)]="telefono"
+        name="telefono"
+        placeholder="Ingrese el telefono"
+        minlength="10"
+        required
+        #campoTelefono="ngModel"
+      />
+    </div>
+
+    <div
+      class="alert alert-danger"
+      role="alert"
+      *ngIf="campoTelefono.errors && campoTelefono.dirty === true"
+    >
+      <p *ngIf="campoTelefono.errors.required">
+        Campo telefono requerido
+      </p>
+      <p *ngIf="campoTelefono.errors.minlength">
+        Minimo 10 caracteres
+      </p>
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Correo</label>
+      <input
+        type="email"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        [(ngModel)]="email"
+        name="email"
+        placeholder="Ingrese el coreo"
+        minlength="5"
+        required
+        pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"
+        #campoEmail="ngModel"
+      />
+      <div
+        class="alert alert-danger"
+        role="alert"
+        *ngIf="campoEmail.errors && campoEmail.dirty === true"
+      >
+        <p *ngIf="campoEmail.errors.required">
+          Campo email requerido
+        </p>
+        <p *ngIf="campoEmail.errors.minlength">
+          Minimo 5 caracteres
+        </p>
+        <p *ngIf="campoEmail.errors.pattern">
+          No es email
+        </p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="exampleInput"
+        aria-describedby="emai"
+        [(ngModel)]="password"
+        name="password"
+        placeholder="*******"
+        minlength="5"
+        required
+        #campoPassword="ngModel"
+      />
+    </div>
+    <div
+      class="alert alert-danger"
+      role="alert"
+      *ngIf="campoPassword.errors && campoPassword.dirty === true"
+    >
+       <p *ngIf="campoPassword.errors.required">
+        Campo password requerido
+      </p>
+      <p *ngIf="campoPassword.errors.minlength">
+        Minimo 5 caracteres
+      </p> 
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Confirme Password</label>
+      <input
+      type="password"
+        class="form-control"
+        id="exampleInput"
+        aria-describedby="emai"
+        [(ngModel)]="password2"
+        name="password2"
+        placeholder="*******"
+        minlength="5"
+        required
+        #campoPassword2="ngModel"
+       
+      />
+    </div>
+
+    <div
+      class="alert alert-danger"
+      role="alert"
+      *ngIf="campoPassword2.errors && campoPassword2.dirty === true"
+    >
+   
+    <!-- <p *ngIf="validador===false">
+      Las contraseñas no coinciden
+    </p>  -->
+      <p *ngIf="campoPassword2.errors.required">
+        Campo requerido
+      </p> 
+      <p *ngIf="campoPassword2.errors.minlength">
+        Minimo 5 caracteres
+      </p> 
+      
+    </div>
+    <button
+      [disabled]="formularioUsuario.invalid"
+      type="submit"
+      class="btn btn-primary"
+    >
+      Submit
+    </button>
+  </form>
 </div>
+
