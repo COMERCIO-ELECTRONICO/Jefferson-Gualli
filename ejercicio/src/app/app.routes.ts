@@ -15,8 +15,13 @@ const rutas: Routes = [
     {
       path: 'iniciar-sesion',
       component: IniciarSesionComponent
-    },{
+    },
+    {
       path: 'estudiante/perfil',
+      component: PerfilUsuarioComponent
+    },
+    {
+      path: 'profesor/perfil',
       component: PerfilUsuarioComponent
     },
     {

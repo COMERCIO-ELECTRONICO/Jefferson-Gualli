@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
 
   valorAutocomplete = '';
   arregloResultado = [];
-  sugerencias = ['Jefferson', 'cachetes', 'orlando'];
+  sugerencias = ['Jefferson', 'David', 'Gualli'];
   constructor(
     private readonly _router: Router,
   ) {}
@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
       this.arregloResultado.push(valorEncontrado);
       this.sugerencias = this.arregloResultado;
     } else {
-      this.sugerencias = ['Jefferson', 'cachetes', 'orlando'];
+      this.sugerencias = ['Jefferson', 'David', 'Gualli'];
     }
     /*this.sugerencias
     = ['hola'];*/
@@ -53,8 +53,15 @@ export class LoginComponent implements OnInit {
           ['/estudiante','perfil']
         )
       }
+      if (this.seleccionadoValor === 'David') {
+        alert('es profesor');
+        this._router.navigate(
+          ['/profesor','perfil']
+        )
+      }
     } else {
       alert('no ingreso');
     }
+    
   }
 }
