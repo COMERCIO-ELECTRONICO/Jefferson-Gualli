@@ -12,7 +12,8 @@ const rutas: Routes = [
     
 @NgModule({
   imports: [
-      RouterModule.forChild(rutas)],
+      RouterModule.forChild(rutas)
+  ],
   providers: [],
   exports: [RouterModule],
 })

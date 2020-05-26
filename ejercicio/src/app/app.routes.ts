@@ -24,8 +24,7 @@ const rutas: Routes = [
     {
       path: 'usuario',
       loadChildren:()=> 
-      import('./usuario/usuario.module')
-      .then(mod => mod.UsuarioModule),
+      import('./usuario/usuario.module').then(mod=>mod.UsuarioModule),
     },
     {
       path: 'profesor/perfil',

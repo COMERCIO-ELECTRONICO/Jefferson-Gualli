@@ -7,9 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InfoUserComponent implements OnInit {
 
-  constructor() { }
+  constructor()
+  {} //public  ruta: ActivatedRoute
+  nombre1 = '';
+  nombre2 = '';
+  apellido1 = '';
+  apellido2 = '';
+  email = '';
+  telefono = '';
+  pass = '';
+  confimarPassword = '';
 
   ngOnInit(): void {
+    /* this._activatedRoute.paramMap.subscribe((resultadoParametros) => {
+      console.log(resultadoParametros);
+    });*/
   }
 
+  crearOEditar() {
+    if (this.pass === this.confimarPassword) {
+      alert('Contraseñas validas');
+    } else {
+      alert('Contraseñas no validas');
+    }
+  }
 }
