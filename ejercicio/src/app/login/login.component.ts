@@ -41,7 +41,9 @@ export class LoginComponent implements OnInit {
     console.log(evento);
     this.seleccionadoValor = evento;
   }
-
+info(){
+  ['./usuario/usuario.module']
+}
   ingresar() {
     console.log(this.valorAutocomplete);
 

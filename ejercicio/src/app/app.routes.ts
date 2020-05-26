@@ -5,6 +5,7 @@ import { NoEncontradoComponent } from './no-encontrado/no-encontrado.component';
 import { IniciarSesionComponent } from './iniciar-sesion/iniciar-sesion.component';
 import { LoginComponent } from './login/login.component';
 import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.component';
+import { matFormFieldAnimations } from '@angular/material/form-field';
 
 
 const rutas: Routes = [
@@ -19,6 +20,12 @@ const rutas: Routes = [
     {
       path: 'estudiante/perfil',
       component: PerfilUsuarioComponent
+    },
+    {
+      path: 'usuario',
+      loadChildren:()=> 
+      import('./usuario/usuario.module')
+      .then(mod => mod.UsuarioModule),
     },
     {
       path: 'profesor/perfil',
