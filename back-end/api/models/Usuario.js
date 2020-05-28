@@ -23,6 +23,11 @@ module.exports = {
   esCasado:{
          type:"boolean"
   
+},
+//RElacion one to many
+mascota:{
+collection:"mascota",
+via:'idUsuario'
 }
 
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
