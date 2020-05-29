@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/Router';
+import { LoginService } from '../services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -17,9 +18,20 @@ export class LoginComponent implements OnInit {
   sugerencias = ['Jefferson', 'David', 'Gualli'];
   constructor(
     private readonly _router: Router,
+    private readonly _loginService
+    : LoginService
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this._loginService
+    .metodoGet('http://localhost:1337/usuario')
+    .subscribe((resultadoMetodoGet) => {
+      console.log('Respuest de Get');
+      console.log(resultadoMetodoGet);
+    });
+
+
+  }
 
   buscarSugerencia(evento) {
     console.log(evento.query);
@@ -45,7 +57,23 @@ info(){
   ['./usuario/usuario.module']
 }
   ingresar() {
-    console.log(this.valorAutocomplete);
+    this._loginService
+    .metodoPost(
+      'http://localhost:1337/usuario',
+      {
+        nombre: "Jefferson",
+        edad: this.pass,
+        correo: this.correo,
+        esCasado: true
+      }
+      )
+    .subscribe(
+      (resultadoPost)=>{
+        console.log('Respuest de Post');
+        console.log(resultadoPost);
+      }
+    )
+ //  console.log(this.valorAutocomplete);
 
     if (this.pass === '1234') {
       alert(this.correo);
@@ -66,4 +94,14 @@ info(){
     }
     
   }
+  eliminarRegitroPorId(){
+    this._loginService
+    .metodoDelete('http://localhost:1337/usuario/2').subscribe(
+      (respuestDelete)=>{
+        console.log(' repuesta de delete');
+        console.log(respuestDelete);
+      }
+    )
+  }
+
 }
