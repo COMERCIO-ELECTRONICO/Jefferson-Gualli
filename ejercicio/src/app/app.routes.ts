@@ -6,6 +6,7 @@ import { IniciarSesionComponent } from './iniciar-sesion/iniciar-sesion.componen
 import { LoginComponent } from './login/login.component';
 import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.component';
 import { matFormFieldAnimations } from '@angular/material/form-field';
+import { LoginGuard } from './guards/login.guard';
 
 
 const rutas: Routes = [
@@ -32,7 +33,8 @@ const rutas: Routes = [
     },
     {
       path: 'login',
-      component: LoginComponent
+      component: LoginComponent,
+      canActivate: [LoginGuard]
     },
     {
       path: '',

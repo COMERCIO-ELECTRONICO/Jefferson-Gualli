@@ -16,6 +16,8 @@ import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.componen
 import { UsuarioModule } from './usuario/usuario.module';
 import {HttpClientModule} from "@angular/common/http";
 import { LoginService } from './services/login.service';
+import { CommonModule } from '@angular/common';
+import { LoginGuard } from './guards/login.guard';
 
 @NgModule({
   declarations: [
@@ -36,11 +38,14 @@ import { LoginService } from './services/login.service';
     MatInputModule,
     AutoCompleteModule,
     UsuarioModule,
-    CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule
 
   ],
-  providers: [LoginService],
+  providers:
+   [LoginService,
+   LoginGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
