@@ -1,5 +1,7 @@
 # jefferson-G
-COMANDOS USADOS PARA EL DESARROLLO DE ESTE PROYECTO --Comando para instalar angular--
+COMANDOS USADOS PARA EL DESARROLLO DE ESTE PROYECTO 
+
+--Comando para instalar angular--
 
 npm install -g @angular/cli
 
@@ -9,7 +11,7 @@ ng new Nombre del proyecto
 
 ----Comando para ver lista de carpetas y escoger en la que vamos a trabajar---
 
-/Desktop/COMERCIO ELECTRONICO/Repositorio-Git/Brayan-Rodriguez/typescript <<-- solo aqui cambiea el nombre en el que vamos a trabajar. ls cd y el nombre de la carpeta a trabajar. y listo
+/Desktop/COMERCIO ELECTRONICO/Repositorio-Git/Jeefferson-Gualli/typescript <<-- solo aqui cambiea el nombre en el que vamos a trabajar. ls cd y el nombre de la carpeta a trabajar. y listo
 
 --Comando para crear dependencias en Angular siempre isntalar al momento de restaurar un proyecto nuevo--
 
